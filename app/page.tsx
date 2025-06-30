@@ -103,7 +103,8 @@ export default function Portfolio() {
       title: "Application de Gestion de Laboratoire IRESCOMATH",
       description:
         "Conception et développement d'une application web complète pour la gestion du laboratoire de recherche HATEM BETTAHAR IRESCOMATH. Système complet de gestion des chercheurs, projets, équipements et publications scientifiques.",
-      image: "/placeholder.svg?height=200&width=300",
+      // image: "/placeholder.svg?height=200&width=300",
+      image: "/images/Irescomath.png",
       technologies: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Material-UI"],
       github: "https://github.com/Mahamat-Brahim-Abderassoul/Projet_Fin_Etude_PFE",
       demo: "#",
@@ -114,7 +115,8 @@ export default function Portfolio() {
       title: "Plateforme de Gestion Scolaire EDU-TUNSI",
       description:
         "Développement d'une plateforme web complète pour la gestion scolaire incluant la gestion des étudiants, professeurs, cours, notes et emplois du temps. Interface intuitive et responsive.",
-      image: "/placeholder.svg?height=200&width=300",
+      // image: "/placeholder.svg?height=200&width=300",
+      image: "/images/Edu-Tounsi.png",
       technologies: ["HTML5", "CSS3", "PHP", "MySQL", "JavaScript"],
       github: "#",
       demo: "#",
@@ -125,7 +127,7 @@ export default function Portfolio() {
       title: "Système de Gestion RH",
       description:
         "Application web pour la gestion des ressources humaines d'une entreprise. Fonctionnalités de gestion des employés, congés, paies, évaluations et recrutement avec tableau de bord analytique.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/gestionRH.png",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Next.js", "JWT"],
       github: "https://github.com/Mahamat-Brahim-Abderassoul/gestion-rh",
       demo: "#",
@@ -135,7 +137,7 @@ export default function Portfolio() {
     {
       title: "E-commerce Platform",
       description: "Une plateforme e-commerce complète avec panier, paiement et gestion des commandes.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/Ecommerce.png",
       technologies: ["React", "Next.js", "Stripe", "MongoDB"],
       github: "#",
       demo: "#",
@@ -447,6 +449,9 @@ export default function Portfolio() {
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?height=200&width=300"
+                        }}
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                         <div className="opacity-0 hover:opacity-100 transition-opacity duration-300 flex space-x-4">
@@ -627,7 +632,7 @@ export default function Portfolio() {
 
                     {/* Numéro de téléphone */}
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+216831978"
                       className="space-y-4 hover:scale-105 transition-transform"
                     >
                       <div className="p-4 bg-green-100 dark:bg-green-900 rounded-full w-16 h-16 mx-auto flex items-center justify-center">
